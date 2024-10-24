@@ -33,7 +33,7 @@ $tasks_due_week = $stmt->fetchAll(PDO::FETCH_ASSOC);
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Dashboard</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
@@ -120,6 +120,7 @@ $tasks_due_week = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </form>
     </div>
 </nav>
+
 
 <div class="container mt-5">
     <h1 class="text-center">My To-Do Lists</h1>
@@ -257,9 +258,16 @@ $tasks_due_week = $stmt->fetchAll(PDO::FETCH_ASSOC);
     generateCalendar(currentMonth, currentYear);
 </script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".hamburger").click(function () {
+            $(".navbar-nav").toggleClass("active");
+        });
+    });
+</script>
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
