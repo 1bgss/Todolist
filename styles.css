@@ -12,6 +12,7 @@ body {
     background-color: #4a90e2 !important;
     padding: 10px 20px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative; /* Tambahkan ini */
 }
 
 .navbar-brand {
@@ -31,6 +32,10 @@ body {
     border-radius: 5px;
 }
 
+.navbar-collapse {
+    z-index: 9999;
+}
+
 /* Hamburger */
 .navbar .hamburger {
     display: none;
@@ -46,23 +51,11 @@ body {
     transition: 0.4s;
 }
 
-@media (max-width: 768px) {
-    .navbar .hamburger {
-        display: flex;
-    }
-
+@media (max-width: 576px) {
     .navbar-nav {
-        display: none;
         flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
         background-color: #4a90e2;
-    }
-
-    .navbar-nav.active {
-        display: flex;
+        z-index: 999;
     }
 
     .navbar-nav a {
