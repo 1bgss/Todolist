@@ -54,6 +54,7 @@ $tasks = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="mb-4">
             <a href="delete_list.php?list_id=<?= $list_id ?>" class="btn btn-danger" onclick="return confirm('Are you sure you want to delete this list?')">Delete List</a>
             <a href="create_task.php?list_id=<?= $list_id ?>" class="btn btn-success">Add New Task</a>
+            <a href="dashboard.php" class="btn btn-secondary">Back to Dashboard</a>
         </div>
 
         <form action="view_list.php" method="GET" class="form-inline mb-3">
